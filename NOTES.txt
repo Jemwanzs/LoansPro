@@ -1,0 +1,231 @@
+📄 Loan Management & Repayment System — Final Scope Document
+Overview:
+A fully client-side Loan Management and Repayment System designed for small financial operators and community lending schemes. Built with frontend technologies and local storage (HTML, CSS, JavaScript) — no backend or cloud APIs. It supports loan issuance, repayment tracking, statement generation, reporting, loanee management, bulk data operations, and system settings — all optimized for mobile-first responsiveness and ease of use.
+
+📌 Functional Modules & Features
+1️⃣ Loan Issuance & Registration:
+Record issued loans with fields:
+
+Loan Number (auto-generated)
+
+Loan Issuance Date (restrict future dates)
+
+Loan Amount
+
+Repayment Period (Months/Weeks/Days)
+
+Loan End Date (computed or input)
+
+Expected Repayment Amount
+
+Interest Rate (pre-defined or default from Loan Type settings)
+
+Total Interest (pre-calculated and editable)
+
+Loanee Details:
+
+Select from Loanees list (auto-fills National ID, Mobile, Email, Employment Status)
+
+Add new Loanee if absent in list
+
+Validate no duplicate National ID or Mobile with different names
+
+Enable search in the Loanees list for quick selection.
+
+Drop-down fields for Loan Type, Repayment Period, and Payment Mode/Channel — all managed under Settings.
+
+Maintain a searchable, manageable loanee list page in Settings.
+
+Enforce real-time validation for required fields.
+
+Auto-fill loan payer details on repayment forms based on loanee details, with provision for adding repayment notes before submission.
+
+Prevent selection of future dates for both Loan Issuance and Loan Repayment entries.
+
+2️⃣ Repayment Management:
+Record repayments against loans:
+
+Date (no future dates allowed)
+
+Amount to Principal
+
+Amount to Interest
+
+Payment Mode
+
+Notes (optional)
+
+Link repayments to the respective loanee — auto-filling loanee details based on loan number.
+
+Real-time update of loan balances.
+
+Validate no repayment before loan issue date.
+
+Alerts for missing repayments based on repayment frequency.
+
+Loan search by loanee name or loan number when recording repayments.
+
+Record Loan End Date with final repayment.
+
+Maintain a dedicated Transactions page storing all repayments, showing:
+
+Date
+
+Principal Paid
+
+Interest Paid
+
+Loan Number Paid for
+
+Ensure repayments progressively reduce balances to zero.
+
+Loans automatically transition to Fully Repaid Loans on complete repayment.
+
+3️⃣ Loan Status Management:
+Running Loans:
+
+List of active loans, sorted by oldest first.
+
+Enable search by Loanee Name or Loan Number.
+
+Fully Repaid Loans:
+
+Separate page for completed loans.
+
+Loans auto-transition upon final repayment.
+
+Bulk upload support for both Running and Fully Repaid loans using downloadable Excel/CSV templates containing necessary columns including a Loan Status column.
+
+4️⃣ Loan Statements & Amortization Schedules:
+Printable individual loan statements in A5 PDF format.
+
+Option to download amortization schedules as PNG or GIF images sharable via WhatsApp.
+
+Statements and amortizations display:
+
+Payment dates
+
+Amounts toward Principal
+
+Amounts toward Interest
+
+Running balance after each repayment
+
+Amortization grows per repayment period (e.g., monthly if specified).
+
+5️⃣ Reports & Exports:
+Summary Reports by period:
+
+This Month, Last 3/6 Months, Year-To-Date (YTD), and Custom Range.
+
+Key metrics:
+
+Total Principal Issued
+
+Total Interest Charged
+
+Total Outstanding Balances
+
+Total Repayments (Principal & Interest)
+
+Best performing Loan Types by count and volume.
+
+Recent loans summary.
+
+Export reports as PDF and Excel.
+
+Bulk repayments upload via standardized downloadable templates.
+
+6️⃣ Dashboard & Analytics:
+Summary cards and visual charts showing:
+
+Total Principal Issued
+
+Total Interest Earned
+
+Outstanding Balances
+
+Total Repayments
+
+Loan issuance trends over time.
+
+Repayment trends per period.
+
+Fix existing issue where analytics do not pick transactions correctly.
+
+7️⃣ Settings & Configurations:
+Single Admin account (no signup/company creation required).
+
+Settings sub-pages:
+
+Loan Types (with default interest rates)
+
+Repayment Period Types
+
+Payment Modes/Channels
+
+Company Name, Brand Color, and Logo
+
+Manage Loanees List
+
+Drop-down fields dynamically populated from these settings.
+
+Enforce consistent color branding across all pages: buttons, hovers, page titles, headings.
+
+Apply mobile-first responsive design with Poppins font styling.
+
+Adjust font and card sizes for mobile devices.
+
+📌 Additional Features & Controls
+Search functionality in Running Loans and Loanee lists.
+
+Control and validate:
+
+No future date selections.
+
+No duplicate National ID or Mobile for different names.
+
+Automatic storage of Loanees from loan issuance.
+
+Manage Loanees separately under Settings > Loanees List.
+
+Validate print functionality and file downloads (PNG/GIF/PDF).
+
+Ensure download options are WhatsApp-share friendly.
+
+Mobile-first build priority — expand to larger screens after optimizing for mobile fitness.
+
+Comma-separated formatting for all monetary values.
+
+📌 Advisory Highlights:
+Build mobile-first for user convenience in grassroots or community setups.
+
+Enforce real-time validation on critical fields (dates, ID numbers, phone numbers).
+
+Auto-link repayments to respective loanees and loans, minimizing data entry errors.
+
+Provide A5 statements and WhatsApp-friendly images for easy offline and mobile sharing.
+
+Use a clean, minimal modern UI with Poppins font for clarity.
+
+Color-branding should adapt dynamically to the company name and logo color specified in settings.
+
+Ensure all operational settings (loan types, payment modes, repayment frequencies) are user-defined and manageable.
+
+✅ Confirmed Clarifications:
+
+Pre-computed interest at issuance; no interest recalculations needed.
+
+Single-company local system.
+
+Single Admin user.
+
+No interest type variations required.
+
+Ensure missing repayments are flagged.
+
+No multi-user logins.
+
+Real-time analytics fixes.
+
+No future dates in records.
