@@ -167,7 +167,7 @@ const LoanIssuance: React.FC = () => {
 
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-2xl font-bold text-gray-900 mb-6">{state.settings.companyName} - Issue New Loan</h1>
+      <h1 className="text-2xl font-bold text-gray-900 mb-6">Issue New Loan</h1>
       
       <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 space-y-6">
         {/* Loan Details */}
